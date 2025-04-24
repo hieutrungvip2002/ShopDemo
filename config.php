@@ -1,8 +1,8 @@
 <?php
 return array(
-    'base' => '/htdocs/demo/DEMO/',
-    'baseURL' => 'http://localhost/demo/DEMO/',
-    'assets' => '/demo/DEMO/assets/',
+    'base' => '/PTIT2402/ShopDemo/',
+    'baseURL' => 'http://localhost/PTIT2402/ShopDemo/',
+    'assets' => '/PTIT2402/ShopDemo/',
     'db' => array(
         'host'     => 'localhost',
         'name'     => 'productdb',

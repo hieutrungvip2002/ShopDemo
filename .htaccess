@@ -1,5 +1,5 @@
 RewriteEngine On
-RewriteBase /demo/DEMO/
+RewriteBase /PTIT2402/ShopDemo/
 
 # Bỏ qua xử lý các file ảnh, JS, CSS – cho load trực tiếp
 RewriteCond %{REQUEST_URI} \.(jpg|jpeg|png|gif|webp|svg|css|js)$ [NC]

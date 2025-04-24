@@ -2,6 +2,7 @@
 // var_dump($productlist);
 $config = require 'config.php';
 $baseURL = $config['baseURL'];
+
 ?>
 <!-- Section-->
 <section class="py-5">
@@ -21,12 +22,18 @@ $baseURL = $config['baseURL'];
                                 <!-- Product name-->
                                 <h5 class="fw-bolder"><?= $iteam['Name'] ?></h5>
                                 <!-- Product price-->
-                                $40.00 - $80.00
+                                <?= $iteam['Price'] ?>
                             </div>
                         </div>
                         <!-- Product actions-->
                         <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                            <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            <div class="text-center mb-2"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                            <form method="post" action="<?= $baseURL . 'cart/add' ?>">
+                                <input type="hidden" name="product_id" value="<?= $iteam['Id'] ?>">
+                                <button type="submit" class="btn btn-primary btn-sm ">Add to Cart</button>
+                            </form>
+                            <div class="text-center"><a class="btn mt-auto btn-primary" href="#">Add to cart</a></div>
+
                         </div>
                     </div>
                 </div>

@@ -2,6 +2,7 @@
 require_once "App/Controllers/ProductController.php";
 require_once "App/Controllers/UserController.php";
 require_once "App/Controllers/HomeController.php";
+require_once "App/Controllers/CartController.php";
 
 $url = $_GET['url'];
 $urlArr = explode('/', $url);
