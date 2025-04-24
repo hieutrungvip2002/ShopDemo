@@ -29,16 +29,16 @@ include_once __DIR__ . "/../Layout/header.php";
                         <td><?= $item['Price'] ?></td>
                         <td><?= $item['Image'] ?></td>
                         <td>
-                        <form action="delete" method="POST">
-                            <input type="hidden" 
-                            name="ProductID" 
-                            value="<?= $item['Id'] ?>" />
-                            <button type="submit"                                 
-                                style="border: none; background: none; 
+                            <form action="delete" method="POST">
+                                <input type="hidden"
+                                    name="ProductID"
+                                    value="<?= $item['Id'] ?>" />
+                                <button type="submit"
+                                    style="border: none; background: none; 
                                         cursor: pointer;">
-                                <i class="fa-solid fa-trash"></i>
-                            </button>
-                        </form>
+                                    <i class="fa-solid fa-trash"></i>
+                                </button>
+                            </form>
                         </td>
                     </tr>
                 <?php

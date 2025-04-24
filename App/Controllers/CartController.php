@@ -37,6 +37,23 @@ class CartController
 
     public function index()
     {
+        require_once './App/Model/ProductModel.php';
+        $productModel = new ProductModel;
+        if (session_status() === PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        $cartIteam = [];
+        if (isset($_SESSION['cart'])); {
+            foreach ($_SESSION['cart'] as $iteam) {
+                $product = $productModel->getProductById($iteam['product_id']);
+                $product['quantity'] = $iteam['quantity'];
+                $cartIteam[] = $product;
+            }
+        }
+
+        // var_dump($cartIteam);
+
         include './App/Views/Cart/index.php';
     }
 }
